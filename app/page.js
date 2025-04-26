@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <>
       <h1 className="text-3xl font-bold">Technical Agency</h1>
-      <Link href="/about">About</Link> <Link href="/services">Services</Link>
+      <p><Link href="/about">About</Link></p>
+      <p><Link href="/services">Services</Link></p>
+      <p><Link href="/blogs">Blog</Link></p>
     </>
   );
 }
