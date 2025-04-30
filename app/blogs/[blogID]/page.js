@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 export async function generateMetadata({ params }) {
     const { blogID } = await params;
     return {
@@ -7,6 +9,9 @@ export async function generateMetadata({ params }) {
 
 export default async function Blog({ params }) {
     const { blogID } = await params;
+    if(!/^\d+$/.test(blogID)){
+      notFound();
+    }
   return (
     <>
       <h1>Blog</h1>
